@@ -36,13 +36,7 @@ const ProductSchema = new mongoose.Schema({
     },
   ],
 });
-// ProductSchema.pre(/^find/, function (next) {
-//   this.populate({
-//     path: "comment",
-//     select: "comment postedAt",
-//   });
-//   next();
-// });
+
 
 const product = mongoose.model("product", ProductSchema);
 export default product;
