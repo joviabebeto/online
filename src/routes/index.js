@@ -10,4 +10,5 @@ router.use("/product",productRoutes)
 router.use("/comment",commentRoutes)
 router.use("/price",priceRoutes)
 
+
 export default router

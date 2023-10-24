@@ -12,7 +12,7 @@ router.post(
     
     Validator.userAccountRule(),
     Validator.inputValidator,
-    userController.createUser
+    userController.createallUser
   );
   router.get("/", VerifyAccess("admin"), userController.getAlluser);
   router.delete("/", VerifyAccess("admin"), userController.deleteAllUser);

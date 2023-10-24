@@ -1,4 +1,4 @@
-import product from "../model/product";
+
 import User from "../model/user";
 import errorResponse from "../utils/successResponse";
 import successResponse from "../utils/successResponse";
@@ -7,10 +7,10 @@ import jwt from "jsonwebtoken"
  
 
 class UserController{
-    static async createUser(req,res){
+    static async createallUser(req,res){
         const {userName, email, password, role}=req.body;
         try {
-          if(req.body.password !== req.body.confirmPassword){
+          if(password!== req.body.confirmPassword){
             return errorResponse(res,401,`password and confirmpassword is not matched`)
           }  
 
