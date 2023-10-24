@@ -7,9 +7,10 @@ import router from "./routes/index"
 const app = express();
 dotenv.config();
 app.use(bodyParser.json());
-app.use("/api/v1",router);
+app.use("api/v1",router);
 const database = process.env.DATABASE;
 const port = process.env.PORT;
+
 
 
 
