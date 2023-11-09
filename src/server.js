@@ -3,11 +3,13 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import router from "./routes/index"
+import cors from "cors"
 
 const app = express();
 dotenv.config();
 app.use(bodyParser.json());
-app.use("api/v1",router);
+app.use("/api/v1",router);
+app.use(cors())
 const database = process.env.DATABASE;
 const port = process.env.PORT;
 
